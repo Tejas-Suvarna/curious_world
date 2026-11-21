@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f6f5ef">
+  <meta name="description" content="A personal lifelong learning project for understanding the people, ideas and forces that shape our world.">
+  <title>The Curious World — a lifelong learning project</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#top" aria-label="The Curious World home"><span class="brand-mark">cw</span><span>The Curious World</span></a>
+    <nav aria-label="Main navigation"><a href="#subjects">Explore subjects</a><a href="#approach">The idea</a></nav>
+    <a class="top-cta" href="#subjects">Start exploring <span aria-hidden="true">↗</span></a>
+  </header>
+
+  <main id="top">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="eyebrow-dot"></span> A PERSONAL LEARNING PROJECT</p>
+        <h1 id="hero-title">A little more curious<br>about <em>everything.</em></h1>
+        <p class="hero-intro">The world is a story with many chapters. This is my place to read them — one subject, one question, one surprising connection at a time.</p>
+        <div class="hero-actions"><a class="button-primary" href="#subjects">Browse the subjects <span aria-hidden="true">↓</span></a><span class="small-note">19 paths to explore · no rush</span></div>
+        <div class="hero-footnote"><span class="tiny-spark">✳</span> Built for a lifetime of learning, not a finish line.</div>
+      </div>
+      <div class="hero-art" role="img" aria-label="Illustrated globe surrounded by paths, stars and small symbols of learning">
+        <div class="art-orbit orbit-one"></div><div class="art-orbit orbit-two"></div>
+        <div class="art-label label-history"><span>▤</span> stories</div><div class="art-label label-science"><span>✳</span> wonder</div>
+        <div class="art-label label-ideas"><span>⌘</span> ideas</div>
+        <svg class="globe" viewBox="0 0 360 360" aria-hidden="true">
+          <defs><radialGradient id="sea" cx="35%" cy="28%"><stop stop-color="#80b2a4"/><stop offset="1" stop-color="#2d716c"/></radialGradient><clipPath id="clip"><circle cx="180" cy="180" r="130"/></clipPath></defs>
+          <circle cx="180" cy="180" r="142" fill="#f6c977" opacity=".24"/><circle cx="180" cy="180" r="130" fill="url(#sea)"/>
+          <g clip-path="url(#clip)" fill="#e8d9b8">
+            <path d="M80 114l24-28 30-10 18 14 25-5 10 20-17 13-4 19-24 8-10 22-18 2-12 23-22-8-4-25-18-14 5-20z"/>
+            <path d="M182 60l26-12 24 13 23-1 28 19 2 24-14 14-27-4-10 17-21-4-7-20-21-10z"/>
+            <path d="M225 152l22-18 27 6 20 24-8 19-18 9-5 25-17 13-7 32-18 13-8-28-11-19 6-30-12-18z"/>
+            <path d="M113 233l23-12 20 8 12 25-10 20-19 2-18-16z"/>
+            <path d="M80 114l24-28 30-10 18 14 25-5 10 20-17 13-4 19-24 8-10 22-18 2-12 23-22-8-4-25-18-14 5-20z" fill="none" stroke="#f5eee0" stroke-width="3" opacity=".35"/>
+          </g>
+          <circle cx="180" cy="180" r="130" fill="none" stroke="#f7edda" stroke-width="2" opacity=".65"/>
+          <path d="M54 180h252M180 50c32 36 48 80 48 130s-16 94-48 130M180 50c-32 36-48 80-48 130s16 94 48 130" fill="none" stroke="#f7edda" stroke-width="1.5" opacity=".25"/>
+        </svg>
+        <span class="art-star star-a">✳</span><span class="art-star star-b">✦</span><span class="art-star star-c">·</span>
+      </div>
+      <div class="hero-index"><span>01 — 19</span><span>THE BIG PICTURE</span></div>
+    </section>
+
+    <section class="subjects-section" id="subjects" aria-labelledby="subjects-title">
+      <div class="section-heading"><div><p class="eyebrow">YOUR LEARNING MAP</p><h2 id="subjects-title">Choose a thread.<br><em>Follow it anywhere.</em></h2></div><p class="section-aside">Every subject connects to another. Start wherever your curiosity takes you.</p></div>
+      <div class="toolbar"><div class="filter-list" role="group" aria-label="Filter subjects"><button class="filter-chip active" data-filter="all">All <span>19</span></button><button class="filter-chip" data-filter="core">Core <span>13</span></button><button class="filter-chip" data-filter="additional">More to explore <span>6</span></button></div><label class="search-box"><span aria-hidden="true">⌕</span><input id="subject-search" type="search" placeholder="Find a subject" aria-label="Find a subject"></label></div>
+      <div class="subject-grid" id="subject-grid" aria-live="polite"></div>
+      <p class="empty-state" id="empty-state" hidden>No subjects match that search. Try another word.</p>
+    </section>
+
+    <section class="approach" id="approach" aria-labelledby="approach-title">
+      <div class="approach-title"><p class="eyebrow">A NOTE TO MY FUTURE SELF</p><h2 id="approach-title">Curiosity is<br><em>a good compass.</em></h2><p>There is no syllabus to finish and no test at the end. Just a growing map of how the world works — and how its stories fit together.</p></div>
+      <div class="approach-steps">
+        <article><span class="step-icon">01</span><div><h3>Start with a question</h3><p>Follow the thing you wonder about, whether it happened a thousand years ago or this morning.</p></div></article>
+        <article><span class="step-icon">02</span><div><h3>See the connections</h3><p>History touches geography. Science shapes politics. Ideas travel, change, and leave traces.</p></div></article>
+        <article><span class="step-icon">03</span><div><h3>Keep what surprises you</h3><p>Stories, maps, timelines, diagrams and small quizzes make new knowledge easier to revisit.</p></div></article>
+      </div>
+    </section>
+    <section class="closing"><span class="closing-mark">✳</span><p>One world. Many ways in.</p><a href="#subjects">Pick your first subject <span aria-hidden="true">↗</span></a></section>
+  </main>
+  <footer><a class="brand footer-brand" href="#top"><span class="brand-mark">cw</span><span>The Curious World</span></a><span>A personal project for a curious life.</span><a href="#top">Back to top ↑</a></footer>
+  <script src="app.js"></script>
+</body>
+</html>
