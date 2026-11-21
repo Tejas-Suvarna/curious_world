@@ -28,7 +28,13 @@ let filter = 'all';
 function renderSubjects() {
   const query = search.value.trim().toLocaleLowerCase();
   const filtered = subjects.filter(subject => (filter === 'all' || subject.category === filter) && `${subject.name} ${subject.desc}`.toLocaleLowerCase().includes(query));
-  grid.innerHTML = filtered.map((subject, index) => `<article class="subject-card"><div class="card-top"><span class="subject-icon" aria-hidden="true">${subject.icon}</span><span class="category-label">${subject.category === 'core' ? 'Core subject' : 'More to explore'}</span></div><h3>${subject.name}</h3><p>${subject.desc}</p><span class="card-index">${String(subjects.indexOf(subject)+1).padStart(2,'0')} / 19</span></article>`).join('');
+  grid.innerHTML = filtered.map(subject => {
+    const number = String(subjects.indexOf(subject)+1).padStart(2,'0');
+    const content = `<div class="card-top"><span class="subject-icon" aria-hidden="true">${subject.icon}</span><span class="category-label">${subject.category === 'core' ? 'Core subject' : 'More to explore'}</span></div><h3>${subject.name}</h3><p>${subject.desc}</p><span class="card-index">${number} / 19</span>`;
+    return subject.name === 'History & Civilisations'
+      ? `<a class="subject-card" href="history.html">${content}<span class="card-link-cue" aria-hidden="true">↗</span></a>`
+      : `<article class="subject-card">${content}</article>`;
+  }).join('');
   empty.hidden = filtered.length > 0;
 }
 

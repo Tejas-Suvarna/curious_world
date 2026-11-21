@@ -12,9 +12,8 @@ Create a GitHub repository, push this folder to its default branch, then choose 
 
 ## Images and illustrations
 
-The homepage globe is an inline SVG, so it is crisp at every size and needs no image download. For future modules, we can add a small number of carefully chosen images in either of two ways:
+Lesson images use direct HTTPS URLs with credits and links to their original sources. Lessons also use maps, timelines, diagrams, and embedded videos where they help explain the topic. See [AGENTS.md](AGENTS.md) for the project guidelines on themes, media, and quizzes.
 
-- **Remote image URL:** put the image URL in an `<img src="…">`. This keeps the repository small, but the image relies on the host allowing hotlinking and remaining online. Prefer stable sources with clear reuse rights, such as Wikimedia Commons, and include a credit and licence link beside the image.
-- **Store the image in the repo:** download an appropriately licensed image into an `images/` folder and reference it locally. This is more reliable for GitHub Pages. Keep an attribution note in the page or a credits file and check the image's licence before reuse.
+## History & Civilisations
 
-For maps, timelines and explanatory diagrams, SVG or CSS illustrations are often clearer and more dependable than a decorative photo. Google Fonts are currently loaded from Google's CDN; the site still has system-font fallbacks if that connection is unavailable.
+The [History & Civilisations curriculum](history.html) lists 60 planned modules in ten parts. [Module 1](history/universe-and-formation-of-earth.html) is available from the curriculum and includes an interactive timeline and quiz. For the YouTube players, open the site through the local HTTP server or GitHub Pages so the browser can send a referrer. Each video also has a direct watch link.
